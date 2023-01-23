@@ -5,5 +5,8 @@
 lukulista = []
 luku = input("Anna kokonaisluku: ")
 while luku != "":
+    luku = int(luku)
     lukulista.append(luku)
-    luku = (input("Anna kokonaisluku: ")
+    luku = input("Anna kokonaisluku: ")
+lukulista.sort(reverse=True)
+print(lukulista[0:5])
