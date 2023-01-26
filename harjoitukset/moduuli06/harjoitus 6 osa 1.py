@@ -64,4 +64,20 @@ print("-------------")
 for i in range(len(lista)):
     if i%2==0:
         print(lista[i])
+#listan kopiointi
 
+lista2 = lista
+lista2.remove(3)
+print(lista)
+
+#Kirjoita parametriton funktio, joka palauttaa paluuarvonaan satunnaisen nopan silmäluvun väliltä 1..6.
+#Kirjoita pääohjelma, joka heittää noppaa niin kauan kunnes tulee kuutonen.
+#Pääohjelma tulostaa kunkin heiton jälkeen saadun silmäluvun.
+import random
+def nopan_heitto():
+    return random.randint(1, 6)
+
+result=0
+while nopan_heitto()!=6:
+    result = nopan_heitto()
+    print(result)
