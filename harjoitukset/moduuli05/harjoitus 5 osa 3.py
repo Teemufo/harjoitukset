@@ -6,4 +6,12 @@
 
 luku = input("Anna kokonaisluku: ")
 luku = int(luku)
-if luku
+if luku >= 1:
+    for check in range(2, int(luku/2)+1):
+        if (luku%check)==0:
+            print("Antamasi luku ei ole alkuluku")
+            break
+    else:
+        print("Antamasi luku on alkuluku.")
+else:
+    print("Antamasi luku ei ole alkuluku")
