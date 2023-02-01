@@ -2,18 +2,19 @@
 #Kirjoita testausta varten pääohjelma, jossa luot listan, kutsut funktiota ja tulostat sen palauttaman summan.
 
 def summafunktio():
-    summa = sum(lukulista)
-    return summa
+    tulos = sum(lukulista)
+    return tulos
 
 lukulista = []
 
 luku = input("Anna kokonaisluku: ")
-while luku != "":
-    luku = int
-    lukulista.append(luku)
+while luku !="":
+    lukulista.append(int(luku))
     luku = input("Anna kokonaisluku: ")
-summa = summafunktio()
-print(summa)
+
+tulos = summafunktio()
+print(summafunktio())
+
 
 
 
