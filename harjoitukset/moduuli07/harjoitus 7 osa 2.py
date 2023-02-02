@@ -14,6 +14,6 @@ while nimi != "":
         print("Uusi nimi.")
         nimet.add(nimi)
     nimi = input("Anna nimi, tyhjä lopettaa: ")
-
-# TODO: tulosta joukon alkiot for toistolla
+for i in nimet:
+    print(i)
 

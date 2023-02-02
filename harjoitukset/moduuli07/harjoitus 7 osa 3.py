@@ -7,7 +7,7 @@
 
 #funktio lisää lentoaseman sanakirjaan
 
-def lisaa():
+def lisää():
     print("vaiheessa")
     tunnus = input("Anna lentoaseman tunnus: ")
     nimi = input("Anna lentoaseman nimi: ")
@@ -18,25 +18,31 @@ def lisaa():
 #funktio hakee lentoaseman nimen ICAO-koodin perusteella sanakirjasta
 
 def hae():
-    print("vaiheessa")
-    return
+    koodi = input("Anna lentoaseman koodi: ")
+    if koodi in lentoasemat:
+        print(f"{koodi}")
+        return
+
+def tulosta():
 
 #luon sanakirjan jolle annan yhden alkion
 
-lentoasemat = {"Helsinki-Vantaan lentoasema" : " EFHK"}
+lentoasemat = {"EFHK" : "Helsinki-Vantaan lentoasema"}
 
 toiminto = -1 #annetaan sellainen alkuarvo että päästään toiston sisään
 
-
 while toiminto != 3:
-    print("1 = lisää uusi lentoasema")
-    print("2 = hae lentoasema")
-    print("3 = lopeta")
-    toiminto = int(input("Valitse toiminto"))
+    print("0 = Tulosta lentoasemien tiedot.")
+    print("1 = Lisää uusi lentoasema.")
+    print("2 = Hae lentoasema.")
+    print("3 = Lopetus.")
+    toiminto = int(input("Valitse toiminto: "))
     if toiminto == 0:
         tulosta()
     elif toiminto == 1:
         lisää()
+    elif toiminto == 2:
+        hae()
 # TODO lisää toiminnot
 
 print("Kiitos ja näkemiin.")
