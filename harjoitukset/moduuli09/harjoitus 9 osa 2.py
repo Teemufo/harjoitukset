@@ -10,12 +10,23 @@ class Auto:
         self.maxspeed = maxspeed
         self.nopeus = 0
         self.matka = 0
+
     def acceleration(self, change):
-        if self.nopeus > 0 and self.nopeus <= self.maxspeed:
-            self.nopeus = self.nopeus + change
+        self.nopeus = self.nopeus + change
+        if self.nopeus >= self.maxspeed:
+            self.nopeus = self.maxspeed
+        elif self.nopeus < 0:
+            self.nopeus = 0
+        return
 
-auto = Auto("ABC-123", "142 km/h")
+auto = Auto("ABC-123", 142)
+
 auto.acceleration(30)
+auto.acceleration(70)
+auto.acceleration(50)
 
-print(f"Auton rekisteritunnus on {auto.register}, sen huippunopeus on {auto.maxspeed}, "
-       f"sen tämän hetkinen nopeus on {auto.nopeus} km/h ja sen kulkema matka on {auto.matka} km.")
+print(f"Auton nopeus on {auto.nopeus} km/h.")
+
+auto.acceleration(-200)
+
+print(f"Auton nopeus on {auto.nopeus} km/h.")
