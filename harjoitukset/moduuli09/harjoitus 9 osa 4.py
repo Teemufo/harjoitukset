@@ -12,10 +12,7 @@
 import random
 
 class Auto:
-    autolista = 0
     def __init__(self, register, maxspeed):
-        Auto.autolista += 1
-        print(f"{Auto.autolista}, {register}, {maxspeed}")
         self.register = register
         self.maxspeed = maxspeed
         self.nopeus = 0
@@ -37,3 +34,16 @@ autolista = []
 
 for i in range(10):
     autolista.append(Auto("ABC-" + str(i+1), random.randint(100, 200)))
+
+kilpailu = True
+
+while kilpailu is True:
+    for auto in autolista:
+        auto.acceleration(random.randint(-10, 15))
+        auto.travel(1)
+        if auto.matka >= 10000:
+            kilpailu = False
+
+for auto in autolista:
+    print(f"{auto.register}, {auto.maxspeed}, {auto.nopeus}, {auto.matka}")
+
