@@ -35,5 +35,8 @@ class Talo:
     def aja_hissiä(self):
         hissi = self.hissit[hissin_nro]
         hissi.siirry_kerrokseen(kerros)
+#    def paniikki(self):
+#        for i in self.lista:
+#            i.siirry_kerrokseen
 
 #TODO Tee pääohjelma, jossa luot talon ja ajat sen hissejä
